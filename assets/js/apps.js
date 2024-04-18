@@ -19,6 +19,21 @@
                 containProduct.appendChild(articleContain)
            
             }
+            searchBar (json)
+        })
+        
+    }
+    
+    function cart (){
+        fetch('https://fakestoreapi.com/carts')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+    }
+
+getProduct() 
+cart()
+
+        function searchBar (json){
             //permet la recherche d'element avec un input text
             let inputSearch = document.getElementById("search")
             inputSearch.addEventListener('input' , function(){
@@ -55,16 +70,4 @@
                 }
                 
             })
-           
-        })
-    }
-    
-    function cart (){
-        fetch('https://fakestoreapi.com/carts')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-    }
-
-getProduct() 
-cart()
-
+        }
